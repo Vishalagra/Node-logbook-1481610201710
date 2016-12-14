@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Logbook Entry</title>
+<link rel="stylesheet" type="text/css" href="stylesheets/stylePage.css">
+
+</head>
+<body>
+
+<div id="skintop" >
+    <table class="skintop">
+        <tr>
+           <td nowrap class="skintopmenu">
+            <td rowspan="2" class="skinlogoimg"><img
+                    src="images/logo.png" alt="SKAT logo"
+                    class="skinlogo" ></td>                     
+        </tr>
+        <tr>
+            <td class="skinlogobar">
+             <div class="skinlogobarminbredde"></div></td>
+        </tr>
+        
+        <tr>
+            <td class="loginHeader"><h2 > LogBook </h2> </td>  
+            <td class="loginHeader"></td>            
+        </tr>
+        
+        </table>
+</div>
+
+
+<div>
+  <h5 > Some text message <br>  Some text message</h5>  
+</div>
+<hr>
+<div >
+  <h5 > User Name <br> Senr 123456789 </h5>
+</div>
+<hr>
+
+<form action ="/logEntry" method = "post">
+
+<table class ="dataEntryTable">
+
+    <tr>
+        <th>   CPR Nummer </th>
+        <th>   CPR Navn  </th>
+        <th>   Date  </th>
+        <th>   Duration </th>
+    </tr>
+
+    <tr>
+        <td>  <input type="text" name="CPR1"  /> </td>
+        <td>  <input type="text" name="name1" /> </td>
+        <td>  <input type="text" name="date1" />    </td>
+        <td>  <input type="text" name="duration1" />    </td>
+    </tr>
+    
+    <tr>
+        <td>  <input type="text" name="CPR2"  /> </td>
+        <td>  <input type="text" name="name2" /> </td>
+        <td>  <input type="text" name="date2" /> </td>
+        <td>  <input type="text" name="timestamp2" /> </td>
+    </tr>
+    <tr>
+        <td>  <input type="text" name="CPR3"  /> </td>
+        <td>  <input type="text" name="name3" /> </td>
+        <td>  <input type="text" name="date3" /> </td>
+        <td>  <input type="text" name="timestamp3" /> </td>
+    </tr> 
+        
+</table>
+
+ <div class ="button">
+           <input type="submit"  name = "submit data" value="Enter Data"/> 
+           <button type="reset" value="Reset">Reset</button>
+ </div>
+
+</form>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<title>LogBook Query</title>
+
+<link rel="stylesheet" type="text/css" href="stylesheets/stylePage.css">
+
+</head>
+ <script type="text/javascript" >
+    /*eslint-env jquery */
+    function loadData() {
+    // Constructing JSON object
+    var txt = '{"CPR1":"1111111111","name1":"Hensa Andersen","date1":"20121208","duration1":"8","CPR2":"2345129087","name2":"Helene","date2":"20130918","duration2":"8","CPR3":"9867245718","name3":"Ola Fredresen","date3":"20161211","duration3":"8","submit data":"Submit Data"}';
+
+    var obj = JSON.parse(txt);
+
+    $(document).ready(function() {
+        $("#CPR1").val(obj.CPR1);
+        });    
+    $(document).ready(function() {
+        $("#CPR2").val(obj.CPR2);
+        });
+    $(document).ready(function() {
+        $("#CPR3").val(obj.CPR3);
+        });
+    $(document).ready(function() {
+        $("#name1").val(obj.name1);
+        });
+    $(document).ready(function() {
+        $("#name2").val(obj.name2);
+        });
+    $(document).ready(function() {
+        $("#name3").val(obj.name3);
+        });
+    $(document).ready(function() {
+        $("#duration1").val(obj.duration1);
+        });
+    $(document).ready(function() {
+        $("#duration2").val(obj.duration2);
+        });
+    $(document).ready(function() {
+        $("#duration3").val(obj.duration3);
+        });
+    $(document).ready(function() {
+        $("#date1").val(obj.date1);
+        });
+    $(document).ready(function() {
+        $("#date2").val(obj.date2);
+        });
+    $(document).ready(function() {
+        $("#date3").val(obj.date3);
+        });
+        
+   
+
+   }
+  </script>
+<body >
+<div id="skintop" >
+    <table class="skintop">
+        <tr>
+           <td nowrap class="skintopmenu">
+            <td rowspan="2" class="skinlogoimg"><img
+                    src="images/logo.png" alt="SKAT logo"
+                    class="skinlogo" ></td>                     
+        </tr>
+        <tr>
+            <td class="skinlogobar">
+             <div class="skinlogobarminbredde"></div></td>
+        </tr>
+        
+        <tr>
+            <td class="loginHeader"><h2 > LogBook </h2> </td>  
+            <td class="loginHeader"></td>            
+        </tr>
+        
+        </table>
+</div>
+
+<div >
+   <table>
+   <tr colspan = "3">
+    <td> fv188 ada - genstartebj works. </td>
+   </tr>
+   <tr >
+    <td> Senr : </td>
+    <td> <input type="text"  name = "senr" maxlength="9"/> </td>
+    <td> <input type="submit"  name = "search" value="Search" onclick="loadData()"/>  </td>
+   </tr>
+  </table>
+  
+</div>
+<hr>
+
+<form action="/logQuery" method ="post">
+
+<table class ="dataQueryTable">
+
+    <tr>
+        <td>  <h5> CPR Nummer </h5> </td>
+        <td>  <h5> CPR Navn</h5>  </td>
+        <td>  <h5> Date</h5>  </td>
+        <td>  <h5> Duration </h5> </td>
+        <td>  <h5> Comments </h5> </td>
+    </tr>
+
+    <tr>
+        <td>  <input type="text" id="CPR1" name="CPR1" disabled="disabled"/> </td>
+        <td>  <input type="text" id="name1" name="name1"  disabled="disabled"/> </td>
+        <td>  <input type="text" id="date1" name ="date1"  disabled="disabled"/>    </td>
+        <td>  <input type="text" id="duration1" name="duration1"  disabled="disabled" />    </td>
+         <td> <input type="text" id="comments1" name="comments1" maxlength="100"/>    </td>
+    </tr>
+    
+    <tr>
+        <td>  <input type="text" id="CPR2" name="CPR2" disabled="disabled" /> </td>
+        <td>  <input type="text" id="name2" name="name2"  disabled="disabled" /> </td>
+        <td>  <input type="text" id="date2" name="date2"  disabled="disabled" /> </td>
+        <td>  <input type="text" id="duration2" name="duration2"  disabled="disabled" /> </td>
+        <td> <input type="text" id="comments2" name="comments2" />    </td>
+    </tr>
+    <tr>
+        <td>  <input type="text" id="CPR3" name="CPR3" disabled="disabled" /> </td>
+        <td>  <input type="text" id="name3" name="name3" disabled="disabled" /> </td>
+        <td>  <input type="text" id="date3" name="date3" disabled="disabled" /> </td>
+        <td>  <input type="text" id="duration3" name="duration3" disabled="disabled" /> </td>
+        <td> <input type="text" id="comments3" name="comments3" />    </td>
+    </tr> 
+    
+
+        
+</table>
+
+ <div class ="button">
+           <input type="submit"  name = "submitData" value="OK"/> 
+ </div>
+
+</form>
+
+</body>
+</html>
